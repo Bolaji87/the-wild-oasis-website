@@ -1,5 +1,5 @@
 import React from "react";
-import CabinCard from "@/app/_components/CabinCard";
+import CabinCard from "@/app/_components/CabinCard.jsx";
 
 export const metadata = {
   title: "Cabins",
