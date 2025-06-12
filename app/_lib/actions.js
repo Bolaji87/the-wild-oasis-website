@@ -28,7 +28,7 @@ export async function updateGuest(formData) {
 export async function deleteReservation(bookingId) {
   const session = auth();
   if (!session) throw new Error("You must be logged in");
-  const guestBookings = await getBookings(session.user.guestId);
+  const guestBookings = await getBookings((await session).user.guestId);
   const guestBookingIds = guestBookings.map((booking) => booking.id);
 
   if (!guestBookingIds.includes(bookingId))
